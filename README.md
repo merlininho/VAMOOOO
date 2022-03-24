@@ -1,2 +1,0 @@
-# VAMOOOO
-vai que vai
