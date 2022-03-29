@@ -1,15 +1,59 @@
-import * as React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   Text,
   TextInput,
   ImageBackground,
   TouchableOpacity,
+  Platform,
   CheckBox,
+  ScrollView,
 } from 'react-native';
-import style from './style';
+import AuthContext from '../AuthContext';
+import Constants from 'expo-constants';
+import * as SQLite from 'expo-sqlite';
+import style from '../styles/Login_Cadastro';
+import react from 'react';
+
+/*function openDatabase() {
+  if(Platform.OS === 'web')
+  {
+    return {
+      transaction: () => {
+        return {
+          executeSql: () => {},
+        };
+      },
+    };
+  }
+
+  const db = SQLite.openDatabase('db.db');
+  return db;
+}
+
+const db = openDatabase();
+
+function Items ({done: doneHeading, onPressItem})
+{
+  const [items, setItems] = useState(null);
+
+  useEffect(() => {
+    db.transaction((tx) => {
+      tx.executeSql(
+        `select * from items where done = ?`,
+        [doneHeading? 1 : 0],
+        (_,{rows: {_array}}) => setItems (_array)
+      );
+    });
+  }, []);
+}*/
 
 const Login_Dark_Theme = () => {
+  const [usuario, setUsuario] = React.useState('');
+  const [senha, setSenha] = React.useState('');
+  
+  const { login } = React.useContext(AuthContext);
+  
   return (
     <View style={style.container}>
       <ImageBackground
@@ -19,14 +63,18 @@ const Login_Dark_Theme = () => {
         <TextInput
           style={style.TBXUsuario}
           name="NomeUsuario"
+          value={usuario}
+          onChangeText={setUsuario}
           placeholder="Nome de usuario"></TextInput>
         <Text style={style.TXTSenha}>Senha</Text>
         <TextInput
           style={style.TBXSenha}
           secureTextEntry="true"
+          value={senha}
+          onChangeText={setSenha}
           name="Senha"
           placeholder="Senha"></TextInput>
-        <TouchableOpacity style={style.BTNLogin}>
+        <TouchableOpacity style={style.BTNLogin} onPress={() => login({usuario, senha})}>
           <Text style={style.TXTButon_Dark}>Fazer login</Text>
         </TouchableOpacity>
       </ImageBackground>

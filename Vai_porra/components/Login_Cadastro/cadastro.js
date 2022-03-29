@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text, ImageBackground, TextInput, TouchableOpacity } from 'react-native';
-import style from './style';
+import style from '../styles/Login_Cadastro';
 
 
 
