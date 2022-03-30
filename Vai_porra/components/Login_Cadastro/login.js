@@ -69,7 +69,7 @@ const Login_Dark_Theme = () => {
         <Text style={style.TXTSenha}>Senha</Text>
         <TextInput
           style={style.TBXSenha}
-          secureTextEntry
+          secureTextEntryre
           value={senha}
           onChangeText={setSenha}
           name="Senha"
