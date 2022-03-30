@@ -8,17 +8,17 @@ import style from '../styles/Login_Cadastro';
 const Cadastro_Dark_Theme = () => {
   return (
     <View style={style.container}>
-      <ImageBackground source = {require('../assets/img_app/Tela_Cadastro_Dark_Theme.png')} style={style.fundo}>
+      <ImageBackground source = {require('../../assets/img_app/Tela_Cadastro_Dark_Theme.png')} style={style.fundo}>
         <Text style={style.TXTUsuario}>Nome de usuario</Text>
         <TextInput style={style.TBXUsuario}  name="NomeUsuario" placeholder="Nome de usuario" >
         
         </TextInput>
         <Text style={style.TXTSenha}>Senha</Text>
-        <TextInput style={style.TBXSenha} secureTextEntry="true" name="Senha" placeholder="Senha">
+        <TextInput style={style.TBXSenha} secureTextEntry name="Senha" placeholder="Senha">
         
         </TextInput>
         <Text style={style.TXTSenha}>Confirme a senha</Text>
-        <TextInput style={style.TBXConfirm} secureTextEntry="true"  name="ConfirmaSenha" placeholder="Confirme a senha">
+        <TextInput style={style.TBXConfirm} secureTextEntry  name="ConfirmaSenha" placeholder="Confirme a senha">
 
         </TextInput>
         <TouchableOpacity style={style.BTNCadastrar}>
@@ -31,17 +31,17 @@ const Cadastro_Dark_Theme = () => {
 const Cadastro_Light_Theme = () => {
   return (
     <View style={style.container}>
-      <ImageBackground source = {require('../assets/img_app/Tela_Cadastro_Light_Theme.png')} style={style.fundo}>
+      <ImageBackground source = {require('../../assets/img_app/Tela_Cadastro_Light_Theme.png')} style={style.fundo}>
         <Text style={style.TXTUsuario_Light }>Nome de usuario</Text>
         <TextInput style={style.TBXUsuario_light}  name="NomeUsuario" placeholder="Nome de usuario" >
         
         </TextInput>
         <Text style={style.TXTSenha_Light}>Senha</Text>
-        <TextInput style={style.TBXSenha_Light} secureTextEntry="true" name="Senha" placeholder="Senha">
+        <TextInput style={style.TBXSenha_Light} secureTextEntry name="Senha" placeholder="Senha">
         
         </TextInput>
         <Text style={style.TXTSenha_Light}>Confirme a senha</Text>
-        <TextInput style={style.TBXConfirm_Light} secureTextEntry="true"  name="ConfirmaSenha" placeholder="Confirme a senha">
+        <TextInput style={style.TBXConfirm_Light} secureTextEntry  name="ConfirmaSenha" placeholder="Confirme a senha">
 
         </TextInput>
         <TouchableOpacity style={style.BTNCadastrar_Light}>

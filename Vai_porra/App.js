@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View } from 'react-native';
-import Login from './components/cadastro';
-import Cadastro from './components/login';
-import style from './components/style';
+import Login from './components/Login_Cadastro/login';
+import Cadastro from './components/Login_Cadastro/cadastro';
+import style from './components/styles/Login_Cadastro';
 
 export function App() {
   return (
